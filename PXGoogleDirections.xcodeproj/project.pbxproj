@@ -33,9 +33,12 @@
 		7A391E161FA637A300171508 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A391E131FA637A300171508 /* libc++.tbd */; };
 		7A391E171FA637A300171508 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A391E141FA637A300171508 /* libicucore.tbd */; };
 		7A391E181FA637A300171508 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A391E151FA637A300171508 /* libz.tbd */; };
+		C998755D535E741321BEEBCA /* libPods-PXGoogleDirections.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C37F077C754404F746F4DB /* libPods-PXGoogleDirections.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41C37F077C754404F746F4DB /* libPods-PXGoogleDirections.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXGoogleDirections.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		734D87B48F26708055A57656 /* Pods-PXGoogleDirections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXGoogleDirections.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-PXGoogleDirections/Pods-PXGoogleDirections.release.xcconfig"; sourceTree = "<group>"; };
 		7A083DD81D2D718F00B42940 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7A083DDA1D2D71D900B42940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A083DDC1D2D723F00B42940 /* PXGoogleDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXGoogleDirections.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		7A391E131FA637A300171508 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7A391E141FA637A300171508 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		7A391E151FA637A300171508 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E1FE5B33E2C5C3A4FBA81065 /* Pods-PXGoogleDirections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXGoogleDirections.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-PXGoogleDirections/Pods-PXGoogleDirections.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +91,29 @@
 				7A391E081FA636A400171508 /* GoogleMaps.framework in Frameworks */,
 				7A083DDB1D2D71D900B42940 /* UIKit.framework in Frameworks */,
 				7A391E0A1FA636A400171508 /* GoogleMapsCore.framework in Frameworks */,
+				C998755D535E741321BEEBCA /* libPods-PXGoogleDirections.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0AD415716668F82EBC7DD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1FE5B33E2C5C3A4FBA81065 /* Pods-PXGoogleDirections.debug.xcconfig */,
+				734D87B48F26708055A57656 /* Pods-PXGoogleDirections.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7A0985431D2D71120095737F = {
 			isa = PBXGroup;
 			children = (
 				7A09854F1D2D71120095737F /* PXGoogleDirections */,
 				7A09854E1D2D71120095737F /* Products */,
 				A4DEFDEF788BFD1D098ABAF1 /* Frameworks */,
+				1C0AD415716668F82EBC7DD5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +171,7 @@
 				7A391E071FA636A400171508 /* GoogleMapsCore.framework */,
 				7A083DDA1D2D71D900B42940 /* UIKit.framework */,
 				7A083DD81D2D718F00B42940 /* CoreText.framework */,
+				41C37F077C754404F746F4DB /* libPods-PXGoogleDirections.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,10 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A0985551D2D71120095737F /* Build configuration list for PBXNativeTarget "PXGoogleDirections" */;
 			buildPhases = (
+				511B541D03C23949FADA8CDB /* [CP] Check Pods Manifest.lock */,
 				7A0985481D2D71120095737F /* Sources */,
 				7A0985491D2D71120095737F /* Frameworks */,
 				7A09854A1D2D71120095737F /* Headers */,
 				7A09854B1D2D71120095737F /* Resources */,
+				EDF4F1471AA042B8C223BDF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +252,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		511B541D03C23949FADA8CDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PXGoogleDirections-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF4F1471AA042B8C223BDF4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../../Pods/Target Support Files/Pods-PXGoogleDirections/Pods-PXGoogleDirections-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-PXGoogleDirections/Pods-PXGoogleDirections-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A0985481D2D71120095737F /* Sources */ = {
@@ -376,6 +433,7 @@
 		};
 		7A0985561D2D71120095737F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1FE5B33E2C5C3A4FBA81065 /* Pods-PXGoogleDirections.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -401,6 +459,7 @@
 		};
 		7A0985571D2D71120095737F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 734D87B48F26708055A57656 /* Pods-PXGoogleDirections.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
